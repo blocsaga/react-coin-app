@@ -21,14 +21,12 @@ import { mainListItems } from 'components/listItems';
 import SearchBox from './components/SearchBox';
 import TopCrypto from './components/TopCrypto';
 import CoinTable from './components/CoinTable';
+// import CoinTableStream from './components/CoinTableStream';
 import Chart from './components/Chart';
 import { connect } from 'react-redux';
 import {makeSelectAllCoin, reduxKey } from '../App/selectors';
 import { createStructuredSelector } from 'reselect';
 import * as mapDispatchToProps from '../App/actions';
-
-
-
 
 
 function Copyright(props) {
@@ -216,7 +214,14 @@ function HomePage(props) {
                   <CoinTable />
                 </Paper>
               </Grid>
+
+              {/* <Grid item xs={12}>
+                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
+                  <CoinTableStream/>
+                </Paper>
+              </Grid> */}
             </Grid>
+
             <Copyright sx={{ pt: 4 }} />
           </Container>
         </Box>
